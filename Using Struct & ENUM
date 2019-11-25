@@ -1,0 +1,39 @@
+fn main() {
+    let vehicle1 = VechileStruct{
+        vehicle_type:VehicleEnum::Cars,
+        brand_name:String::from("Lexus"),
+        reg_num:String::from("SUN-786"),
+        reg_city:String::from("Sindh")
+    };
+
+    let vehicle2 = VechileStruct{
+        vehicle_type:VehicleEnum::Trucks,
+        brand_name:String::from("Kia"),
+        reg_num:String::from("YOU-696"),
+        reg_city:String::from("Sindh")
+    };
+
+    let vehicle3 = VechileStruct{
+        vehicle_type:VehicleEnum::Bikes,
+        brand_name:String::from("Harley Davidson"),
+        reg_num:String::from("khi-789"),
+        reg_city:String::from("Sindh")
+    };
+    println!("{:#?}",vehicle1);
+    println!("{:#?}",vehicle2);
+    println!("{:#?}",vehicle3);
+}
+
+#[derive(Debug)]
+enum VehicleEnum{
+    Cars,
+    Trucks,
+    Bikes
+}
+#[derive(Debug)]
+struct VechileStruct{
+    vehicle_type: VehicleEnum,
+    brand_name:String,
+    reg_num:String,
+    reg_city:String
+}
